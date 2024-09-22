@@ -51,5 +51,5 @@ python -m pip freeze > requirements.txt
 Installing packages used in the project from the list
 ```sh
 python -m pip install -r requirements.txt
-bfhjdgshjgfkjdasbgfj 
+bfhjdgshjgfkjdasbgfj а
 ```
