@@ -1,7 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 def index(request):
-    return HttpResponse("<h2>Глaвнaя</h2>")
+ return HttpResponse("Index")
 def about(request):
-    return HttpResponse("<h2>0 сайте</h2>")
+ return HttpResponse("About")
 def contact(request):
-    return HttpResponse("<h2>Koнтaкты</h2>")
+ return HttpResponseRedirect("/about")
+def details(request):
+ return HttpResponsePermanentRedirect("/")
