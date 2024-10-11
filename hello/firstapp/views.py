@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django import forms
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, HttpResponseNotModified, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponseNotAllowed, HttpResponseGone, HttpResponseServerError
 from django.template.response import TemplateResponse
+
+from hello.firstapp.forms import UserForm
 #from django.http import *
 
 # Create your views here.
@@ -82,3 +84,6 @@ def m410(request):
     return HttpResponseGone("<h2>Content is no longer here</h2>")
 def m500(request):
     return HttpResponseServerError("<h2>Something is wrong</h2>")
+
+def index(request):
+ return render(request, "firstapp/home.html")
