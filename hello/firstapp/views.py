@@ -85,12 +85,11 @@ def m410(request):
 def m500(request):
     return HttpResponseServerError("<h2>Something is wrong</h2>")
 
+from .forms import UserForm
+from django.shortcuts import render
 def index(request):
- return render(request, "firstapp/home.html")
-
-def index(request):
- return render(request, "firstapp/home.html")
-
+ userform = UserForm()
+ return render(request, "firstapp/index.html", {"form": userform})
 
 
 def get_data(request):

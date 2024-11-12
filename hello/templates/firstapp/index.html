@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <title>Передача сложных данных</title>
+    <meta charset="UTF-8">
+    <title>Форма Django!</title>
 </head>
 <body>
- <h1>{{header}}</h1>
- <p>Имя: {{user.name}} Age: {{user.age}}</p>
- <p>Адрес: ул. {{address.0}}, д. {{address.1}}, кв.
- {{address.2}}</p>
- <p>Владеет языками: {{langs.0}}, {{langs.1}}</p>
+     <form method="POST">
+    {% csrf_token %}
+ <table>
+ {{ form }}
+ </table>
+ <input type="submit" value="Отправить" >
+</form>
 </body>
 </html>
+
+from django import forms
+class UserForm(forms.Form):
+basket = forms.BooleanField(label="Положить в корзину", required=False)
