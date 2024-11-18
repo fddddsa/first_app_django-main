@@ -1,3 +1,4 @@
 from django import forms
 class UserForm(forms.Form):
- url_text = forms.URLField(label="Введите URL", help_text="Например http://www.google.com")
+      combo_text = forms.ComboField(label="Введите URL",
+           fields=[forms.URLField(), forms.CharField(max_length=20)])
