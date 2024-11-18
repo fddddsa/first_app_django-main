@@ -1,3 +1,3 @@
 from django import forms
 class UserForm(forms.Form):
- reg_text = forms.RegexField(label="Текст", regex="^[0-9][A-F][0-9]$")
+ url_text = forms.URLField(label="Введите URL", help_text="Например http://www.google.com")
