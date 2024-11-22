@@ -3,7 +3,7 @@ from django import forms
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect, HttpResponseNotModified, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseNotFound, HttpResponseNotAllowed, HttpResponseGone, HttpResponseServerError
 from django.template.response import TemplateResponse
 
-from hello.firstapp.forms import UserForm
+#from hello.firstapp.forms import UserForm
 #from django.http import *
 
 # Create your views here.
